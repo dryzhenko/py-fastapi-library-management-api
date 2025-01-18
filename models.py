@@ -21,7 +21,7 @@ class Book(Base):
     title = Column(String, unique=True)
     summary = Column(String)
     publication_date = Column(Date)
-    author_id = Column(Integer, ForeignKey("author.id"))
+    author_id = Column(Integer, ForeignKey("authors.id"))
 
     author = relationship(Author)
 
